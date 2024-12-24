@@ -6,7 +6,7 @@ require('dotenv').config();
 require('./connection/connection');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Import routes
 const postroute = require(path.join(__dirname, 'routes', 'postroute'));
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS setup
 app.use(cors({
-  origin: 'https://life-scape-blogclient.vercel.app/', // Replace with your Vercel frontend URL
+  origin: 'https://lifescape-blogapp-client.vercel.app', // Replace with your Vercel frontend URL
   credentials: true, // If you are using cookies or authentication headers
 }));
 
