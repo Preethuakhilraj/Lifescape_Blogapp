@@ -17,11 +17,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS setup
-app.use(cors({
-  origin: 'https://lifescape-blogapp-client.vercel.app', 
-  credentials: true, // Allow cookies or authorization headers
-}));
 
+
+app.use(cors({
+  origin: 'https://lifescape-blogapp-client.vercel.app', // Frontend URL
+  credentials: true, // Allow cookies/auth headers
+}));
 
 
 // Static files
