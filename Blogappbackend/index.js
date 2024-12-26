@@ -17,14 +17,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS setup
-const corsOptions = {
-  origin: ['https://lifescape-blogapp-client.vercel.app', 'http://localhost:4000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true,
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
-
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'https://lifescape-blogapp-client.vercel.app', 
+  credentials: true, // Allow cookies or authorization headers
+}));
 
 
 
